@@ -1,0 +1,87 @@
+.logo {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.personal {
+  z-index: 1;
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.background-overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  z-index: 0;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=60)';
+  filter: alpha(opacity=60);
+  -moz-opacity: 0.6;
+  -khtml-opacity: 0.6;
+  opacity: 0.6;
+}
+
+#edit-contact {
+  background: white;
+  display: inline-block;
+  position: absolute;
+  bottom: -64px;
+  width: 500px;
+  margin-left: 10px;
+  outline: none;
+  padding: 10px 0px;
+  z-index: 9999;
+  border-radius: 10px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+#edit-contact:before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  left: -4px;
+  top: calc(100% - 87px);
+  transform: rotate(-45deg);
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent transparent white;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.edit-links {
+  float: left;
+}
+
+.subtitle-edit:hover:before {
+  content: '\f044';
+  font-family: 'Font Awesome 5 Free' !important;
+  font-weight: 900;
+  position: absolute;
+  right: -23px;
+  bottom: 29px;
+  font-size: 16px;
+  color: #2fa5cc;
+}
+
+.subtitle {
+  text-align: center;
+}
+
+.logo-edit:hover:before {
+  content: '\f044';
+  font-family: 'Font Awesome 5 Free' !important;
+  font-weight: 900;
+  position: absolute;
+  top: 54px;
+  right: 52px;
+  font-size: 33px;
+  color: #2fa5cc;
+  bottom: 62px;
+}
